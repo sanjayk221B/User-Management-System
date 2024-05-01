@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Signup</title>
+    <link rel="stylesheet" type="text/css" href="slide navbar style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/form.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="signup">
+        <form method="post" action="/api/login">
+          <label for="chk" aria-hidden="true">Sign In</label>
+          <input
+            type="email"
+            name="email"
+            id="your_name"
+            placeholder="Your Email"
+            required
+            pattern="[A-Za-z0-9]*[@](gmail)*[\.](com)$"
+          />
+          <input
+            type="password"
+            name="password"
+            id="your_pass"
+            placeholder="Password"
+          />
+          <button>Sign In</button>
+          <% if (isValidate) { %>
+          <label style="position: static; color: red; font-size: small"
+            >Invalid credentials..! Please try again.</label
+          >
+          <% } %>
+        </form>
+        <a href="/register" class="signup-image-link">Not a member? Sign up</a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!-- include header -->
+<%- include('include/_header') %>
+    <!-- /include header -->
+
+
+    <!-- Main Page -->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <a href="/add-user" class="border-shadow">
+                    <span class="text-gradient">New User <i class="fa-solid fa-user"></i></span>
+                </a>
+
+
+            </div>
+
+            <div>
+                <label for="name" class="text-light">Search Here</label>
+                <input type="text" name="name" placeholder="Search by name" id="name-search" style="width: 30%;
+            padding: .6em 1em;
+            margin: .5em 0;
+            border: 1px solid var(--border);
+            font-family: 'Barlow', sans-serif;
+            font-size: 1em;
+            border-radius: .2em;">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+
+
+
+            <!-- form handling -->
+            <form action="/" method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>@Email</th>
+                            <!-- <th>Gender</th>
+                        <th>Status</th> -->
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%- include('include/_show') %>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </main>
+    <!-- /Main Page -->
+
+
+    <!-- include footer -->
+    <%- include('include/_footer') %>

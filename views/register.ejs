@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>register</title>
+
+    <link rel="stylesheet" href="/css/form.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="signup">
+        <form method="POST" action="/api/users">
+          <label for="chk" aria-hidden="true">Sign up</label>
+          <input type="text" name="name" placeholder="User name" required="" />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+            pattern="[A-Za-z0-9]*[@](gmail)*[\.](com)$"
+          />
+          <input type="password" name="password" placeholder="Password" />
+          <button>Sign up</button>
+          <% if (emailIsValid) { %>
+          <label style="position: static; color: red; font-size: small">
+            this email is already used</label
+          >
+          <% } %>
+        </form>
+        <a href="/login" class="signup-image-link">Already a member? Sign in</a>
+      </div>
+    </div>
+  </body>
+</html>
